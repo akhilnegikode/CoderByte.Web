@@ -1,0 +1,60 @@
+
+
+<div class="row">
+	<div class="col-md-6">
+
+		<div class="card">
+
+			<div class="card-header bg-white">
+				<h4 class="card-title">SIGN UP</h4>
+			</div>
+
+			<div class="card-block">
+
+				<form #f="ngForm" novalidate (ngSubmit)="registerUser(f)">
+
+
+					<div class="form-group">
+						<label for="employee-name">Employee Name</label>
+						<input id="employee-name" type="text" required name="employeeName" class="form-control" placeholder="Employee Name" tmFocus ngModel>
+					</div>
+
+          	<div class="form-group">
+						<label for="employee-number">Employee Number</label>
+						<input id="employee-number" type="text" required name="employeeNumber" class="form-control" placeholder="Employee Number" ngModel>
+					</div>
+
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input id="password" type="password" required name="password" class="form-control" placeholder="Password" ngModel>
+					</div>
+         
+          <div class="form-group">
+						<label for="designation">Designation</label>
+						<input id="designation" type="text" required name="designation" class="form-control" placeholder="Designation" ngModel>
+					</div>
+
+		  <div class="form-group">
+						<label for="serviceLine">ServiceLine</label>
+						<input id="serviceLine" type="text" required name="serviceLine" class="form-control" placeholder="ServiceLine" ngModel>
+					</div>
+
+		  <div class="form-group">
+						<label for="role">Role</label>
+						<input id="role" type="text" required name="role" class="form-control" placeholder="Role" ngModel>
+					</div>
+  
+				<div class="form-group">
+						<button type="submit" class="btn btn-primary" [disabled]="f.invalid || isRequesting">Sign Up</button>
+						<app-spinner [isRunning]="isRequesting"></app-spinner>
+					</div>
+
+					<div *ngIf="errors" class="alert alert-danger" role="alert">
+						<strong>Something went wrong!</strong> {{errors}}
+					</div>
+
+				</form>
+			</div>
+
+		</div>
+	</div>

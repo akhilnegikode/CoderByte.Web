@@ -1,0 +1,32 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-body">
+                    <table class="table table-bordered table-hover" *ngIf="employees && employees.length">
+                        <thead>
+                            <tr>
+								<th>S.No</th>
+								<th>Employee ID</th>
+								<th>Employee Name</th>
+								<th>Designation</th>
+								<th>Service Line</th>
+								<th>Role</th>
+							</tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let employee of employees">
+								<td>{{employee.Id}}</td>
+                                <td>{{employee.employeeNumber}}</td>
+                                <td>{{ employee.employeeName }}</td>
+								<td>{{ employee.designation }}</td>
+								<td>{{ employee.serviceLine }}</td>
+								<td>{{ employee.role }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
