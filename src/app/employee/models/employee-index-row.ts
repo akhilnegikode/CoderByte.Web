@@ -1,6 +1,6 @@
 export interface EmployeeIndexRow 
 {
-    Id:number;
+    id:number;
     employeeNumber: number;
     employeeName:string;
     designation: string;

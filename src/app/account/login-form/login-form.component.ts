@@ -52,4 +52,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
         error => this.errors = error);
     }
   }
+  onBack() {
+    this.router.navigate(['/']);
+} 
 }

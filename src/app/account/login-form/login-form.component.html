@@ -27,8 +27,9 @@
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary" [disabled]="f.invalid || isRequesting">Login</button>
 						<app-spinner [isRunning]="isRequesting"></app-spinner>
+						<button type="button" class="btn btn-default" style="margin-left:10px" (click)="onBack()">Home</button>
+						<app-spinner [isRunning]="isRequesting"></app-spinner>
 					</div>
-
 					<div *ngIf="errors" class="alert alert-danger" role="alert">
 						<strong>Something went wrong!</strong> {{errors}}
 					</div>
